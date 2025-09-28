@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../../firebaseConnection'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 import './index.css'
 
 export default function Register() {

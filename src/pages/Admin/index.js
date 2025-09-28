@@ -7,19 +7,18 @@ import './index.css'
 export default function Admin() {
   const [task, setTask] = useState('')
   const [tasks, setTasks] = useState([])
-  const [user, setUset] = useState({})
+  const [user, setUser] = useState({})
   const [edit, setEdit] = useState({})
 
   useEffect(() => {
     async function loadTasks() {
       const userDetail = localStorage.getItem("@detailUser")
       const data = JSON.parse(userDetail)
-      setUset(data)
-
+      setUser(data)
       if(userDetail) {
         const taskRef = collection(db, "tasks")
         const q = query(taskRef, orderBy("created", "desc"), where("userUid", "==", data?.uid))
-        const unsub = onSnapshot(q, (snapshot) => {
+        onSnapshot(q, (snapshot) => {
           let list = []
 
           snapshot.forEach((doc) => {
@@ -30,7 +29,6 @@ export default function Admin() {
             })
           })
 
-          console.log(tasks)
           setTasks(list)
         })
       }
