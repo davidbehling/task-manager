@@ -78,20 +78,20 @@ task-manager/
 ## ⚙️ Tecnologias Utilizadas
 
 **Frontend:**
-
+```
 ⚛️ React 18.2.0 - Framework principal
 🛣️ React Router DOM 6.8.1 - Gerenciamento de rotas
 🎨 CSS3 - Estilização
 📄 HTML5 - Estrutura
-
+```
 **Backend/Infraestrutura:**
-
+```
 🔥 Firebase - Backend as a Service
 Firestore - Banco de dados NoSQL
 Firebase Auth - Autenticação de usuários
 🐳 Docker - Containerização
 📦 npm - Gerenciador de pacotes
-
+```
 ## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos:
